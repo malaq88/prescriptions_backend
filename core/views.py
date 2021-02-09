@@ -23,7 +23,7 @@ class PrescriptionViewSet(viewsets.ModelViewSet):
             if (physicians_status == 404):
                 return Response({"error": {"message": "physician not found", "code": "02"}}, status=status.HTTP_404_NOT_FOUND)
             elif (patient_status == 404):
-                return Response({"error": {"message": "patient not found", "code": "03"}}, status=status.HTTP_400_BAD_REQUEST)
+                return Response({"error": {"message": "patient not found", "code": "03"}}, status=status.HTTP_404_NOT_FOUND)
             elif (physicians_status != 200):
                 if (physicians_status == 408):
                     return Response({"error": {"message": "physicians service not available", "code": "05"}}, status=status.HTTP_408_REQUEST_TIMEOUT)
