@@ -54,8 +54,8 @@ curl -X POST   http://localhost:8000/prescriptions/  \
       ```
  - para rodar os testes unitários;
     - ``` python3 manage.py test ``` 
- - Princípios SOLID;
-
+ - para iniciar o servidor locamente;
+    - ``` python manage.py runserver ```
 
  Infelizmente eu não tinha certos conhecimentos de utilização de serviços externos ao Django Rest Fremework, por isso procurei algumas bibliotecas do Python para acessar o serviço e fazer a validações solicitadas, também não consegui simular os timeouts ou queda de serviços, por isso não consegui incluílos nos testes.
 
